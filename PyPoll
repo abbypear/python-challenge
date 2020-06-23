@@ -1,0 +1,70 @@
+#Beginning imports
+import os
+import csv
+
+#Import the csv file
+homeworkpoli_csv = os.path.join('PythonStuff', "03-Python_Homework_Instructions_PyPoll_Resources_election_data")
+
+#Define a function to conduct an analysis
+def data_analysis(PyPoll_Homework):
+
+    #Store the data as the correct data types
+    voter_id = int(PyPoll_Homework[0])
+    county = str(PyPoll_Homework[1])
+    candidate = str(PyPoll_Homework[2])
+
+    #The total number of votes cast
+    total_votes = len(voter_id) 
+
+    #List of candidates who recieved votes
+    candidateList = str(candidate)
+    or 
+    candidateList = ["Correy", "Khan", "Li"]
+
+    #The percentage of votes each candidate won
+    for candidate in open('homeworkpoli_csv'):
+        if candidate == read("Correy"):
+            sum(candidate) = str(correyvotes)
+            percentcorrey = correyvotes / total_votes
+        if candidate == read("Khan"):
+            sum(candidate) = str(khanvotes)
+            percentkhan = khanvotes / total_votes
+        if candiate == read("Li"):
+            sum(candidate) = str(livotes)
+            percentli = livotes / total_votes
+
+    #The total number of votes each candidate won
+    if candidate in open('homeworkpoli.csv') == Correy:
+        sum(candidate)
+    if candidate in open('homeworkpoli.csv') == Khan:
+        sum(candidate)
+    if candidate in open('homeworkpoli.csv') == Li:
+        sum(candidate)
+
+    #The winner of the election based on popular vote.
+    winner = int(max(candidate))
+
+#Open the csv file
+with open(homeworkpoli_csv) as csvfile:
+    csvreader = csv.reader(csv, delimiter=",")
+    csv_header = next(csvreader)
+
+    #Store values as a data list
+    voter_id = []
+    county = []
+    candidate = []
+
+    #Go through the rows for data
+    for row in csvreader:
+        #Append adjusted strings to data list
+        data.append([voter_id, county, candidate])
+        voter_id.append(row[0])
+        county.append(row[1])
+        candidate.append(row[2])
+
+# Print all the things
+print(f"Total Votes Cast: {total_votes}")
+print(f"{candidateList}"")
+print(f"Percent votes won: Correy won ${percentcorrey}, Khan won ${percentkhan}, and Li won ${percentli}")
+print(f"Total votes won: Correy won {correyvotes}, Khan won {khanvotes}, and Li won {livotes}")
+print(f"The winner is {winner}"")
